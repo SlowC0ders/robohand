@@ -3,7 +3,7 @@
 ***Languages: C++, Python.***
     
 * Our system is built in ROS (robot operation system) framework.
-* All project is described with Nodes and Topics.
+* All projects are described with Nodes and Topics.
 *
     
 ### Structure (parts):
