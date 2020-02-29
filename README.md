@@ -4,7 +4,7 @@
     
 * Our system is built in ROS (robot operation system) framework.
 * All project is described with Nodes and Topics.
-* Every part has a repository.
+*
     
 ### Structure (parts):
 1. Image analysing and detecting reference points
