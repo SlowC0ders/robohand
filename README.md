@@ -6,7 +6,7 @@ That is the open source project, whose main purpose is to create an automatic ma
 * All project is described with Nodes and Topics.
 * Every part has a repository.
 
-Structure (parts):
+#### Structure (parts):
 - Image analysing and detecting reference points
 - Convering object's coordinates from image to real
 - Inverse kinematics problem
