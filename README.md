@@ -1,5 +1,5 @@
 # Robohand
-That is the open source project that is called Robohand.
+That is the open source project, whose main purpose is to create an automatic manipulator.
 ***Languages: C++, Python.***
 
 * Our system is built in ROS (robot operation system) framework.
