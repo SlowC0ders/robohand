@@ -71,10 +71,10 @@ while True:
         radius = figure_radius_search(img, img_info[ 0 ], img_info[ 1 ], center[ 0 ], center[ 1 ])
         print ("Center of figures:" + str(center))
         print ("Radius of figures:" + str(radius))       
-    print ("First reference point:" + str(A))
-    print ("Second reference point:" + str(B))
-    print ("Third reference point:" + str(C))
-    print ("Fourth reference point:" + str(D))
+        print ("First reference point:" + str(A))
+        print ("Second reference point:" + str(B))
+        print ("Third reference point:" + str(C))
+        print ("Fourth reference point:" + str(D))
     ch = cv2.waitKey(5)
     if ch == 27:
         break
