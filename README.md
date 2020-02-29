@@ -1,4 +1,4 @@
-# Robohand
+# RoboHand
 ### That is the open source project, whose main purpose is to create an automatic manipulator.
 ***Languages: C++, Python.***
     
@@ -7,9 +7,9 @@
 * Every part has a repository.
     
 ### Structure (parts):
-- Image analysing and detecting reference points
-- Convering object's coordinates from image to real
-- Inverse kinematics problem
-- Hand control by results of the previous part
-- ...
+1. Image analysing and detecting reference points
+2. Convering object's coordinates from image to real
+3. Inverse kinematics problem
+4. Hand control by results of the previous part
+5. ...
 
