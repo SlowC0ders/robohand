@@ -49,8 +49,7 @@ def figure_radius_search(image, height, width, center_x, center_y):
 
 cap = cv2.VideoCapture(0)
 while True:
-    ret, img1 = cap.read()
-    img = cv2.imread("images/test7.jpg")
+    ret, img = cap.read()   
     img_info = list(img.shape)
     A = reference_point_search(img, 0, img_info[ 0 ] // 2, img_info[ 1 ] // 2, img_info[ 0 ])
     B = reference_point_search(img, 0, 0, img_info[ 1 ] // 2, img_info[ 0 ] // 2)
