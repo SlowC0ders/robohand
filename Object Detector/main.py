@@ -70,13 +70,7 @@ while True:
     else:
         radius = figure_radius_search(img, img_info[ 0 ], img_info[ 1 ], center[ 0 ], center[ 1 ])
         print ("Center of figures:" + str(center))
-        print ("Radius of figures:" + str(radius))
-        cv2.circle(img, (A[ 1 ], A[ 0 ]), 4, (0, 0, 255), -1)
-        cv2.circle(img, (B[ 1 ], B[ 0 ]), 4, (0, 0, 255), -1)
-        cv2.circle(img, (C[ 1 ], C[ 0 ]), 4, (0, 0, 255), -1)
-        cv2.circle(img, (D[ 1 ], D[ 0 ]), 4, (0, 0, 255), -1)
-        cv2.circle(img, (center[ 1 ], center[ 0 ]), 4, (0, 0, 255), -1)
-        cv2.line(img, (center[ 1 ], center[ 0 ]), (center[ 1 ] + radius, center[ 0 ]), (0, 0, 255), 1)
+        print ("Radius of figures:" + str(radius))       
     print ("First reference point:" + str(A))
     print ("Second reference point:" + str(B))
     print ("Third reference point:" + str(C))
@@ -86,4 +80,3 @@ while True:
         break
 
 cap.release()
-cv2.destroyAllWindows()
