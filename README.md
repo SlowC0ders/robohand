@@ -4,8 +4,9 @@
     
 * Our system is built in ROS (robot operation system) framework.
 * All projects are described with Nodes and Topics.
-* All examples have been checked in Ubuntu 18.04
-    
+* All examples have been checked in Ubuntu 18.04 LTS
+* ROS version: Melodic Morenia (12th)
+
 ### Structure (parts):
 1. Image analysing and detecting reference points
 2. Convering object's coordinates from image to real
