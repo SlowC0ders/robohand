@@ -1,0 +1,6 @@
+coord one
+coord two
+coord three
+coord four
+coord object
+int32 radius

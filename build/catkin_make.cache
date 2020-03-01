@@ -1,0 +1,2 @@
+arm
+-DCATKIN_DEVEL_PREFIX=/home/johnnyname/arm_ws/devel -DCMAKE_INSTALL_PREFIX=/home/johnnyname/arm_ws/install -G Unix Makefiles
