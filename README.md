@@ -4,7 +4,7 @@
     
 * Our system is built in ROS (robot operation system) framework.
 * All projects are described with Nodes and Topics.
-*
+* All examples have been checked in Ubuntu 18.04
     
 ### Structure (parts):
 1. Image analysing and detecting reference points
