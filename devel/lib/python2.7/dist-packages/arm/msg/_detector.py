@@ -8,7 +8,7 @@ import struct
 import arm.msg
 
 class detector(genpy.Message):
-  _md5sum = "d1c4c6e71faa44d8334b50604b75a51c"
+  _md5sum = "93aa21638d78edb37fecdca254769315"
   _type = "arm/detector"
   _has_header = False #flag to mark the presence of a Header object
   _full_text = """coord one
@@ -16,15 +16,15 @@ coord two
 coord three
 coord four
 coord object
-int32 radius
+int16 radius
 
 ================================================================================
 MSG: arm/coord
-int64 x
-int64 y
+int32 x
+int32 y
 """
   __slots__ = ['one','two','three','four','object','radius']
-  _slot_types = ['arm/coord','arm/coord','arm/coord','arm/coord','arm/coord','int32']
+  _slot_types = ['arm/coord','arm/coord','arm/coord','arm/coord','arm/coord','int16']
 
   def __init__(self, *args, **kwds):
     """
@@ -76,7 +76,7 @@ int64 y
     """
     try:
       _x = self
-      buff.write(_get_struct_10qi().pack(_x.one.x, _x.one.y, _x.two.x, _x.two.y, _x.three.x, _x.three.y, _x.four.x, _x.four.y, _x.object.x, _x.object.y, _x.radius))
+      buff.write(_get_struct_10ih().pack(_x.one.x, _x.one.y, _x.two.x, _x.two.y, _x.three.x, _x.three.y, _x.four.x, _x.four.y, _x.object.x, _x.object.y, _x.radius))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -99,8 +99,8 @@ int64 y
       end = 0
       _x = self
       start = end
-      end += 84
-      (_x.one.x, _x.one.y, _x.two.x, _x.two.y, _x.three.x, _x.three.y, _x.four.x, _x.four.y, _x.object.x, _x.object.y, _x.radius,) = _get_struct_10qi().unpack(str[start:end])
+      end += 42
+      (_x.one.x, _x.one.y, _x.two.x, _x.two.y, _x.three.x, _x.three.y, _x.four.x, _x.four.y, _x.object.x, _x.object.y, _x.radius,) = _get_struct_10ih().unpack(str[start:end])
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e) #most likely buffer underfill
@@ -114,7 +114,7 @@ int64 y
     """
     try:
       _x = self
-      buff.write(_get_struct_10qi().pack(_x.one.x, _x.one.y, _x.two.x, _x.two.y, _x.three.x, _x.three.y, _x.four.x, _x.four.y, _x.object.x, _x.object.y, _x.radius))
+      buff.write(_get_struct_10ih().pack(_x.one.x, _x.one.y, _x.two.x, _x.two.y, _x.three.x, _x.three.y, _x.four.x, _x.four.y, _x.object.x, _x.object.y, _x.radius))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -138,8 +138,8 @@ int64 y
       end = 0
       _x = self
       start = end
-      end += 84
-      (_x.one.x, _x.one.y, _x.two.x, _x.two.y, _x.three.x, _x.three.y, _x.four.x, _x.four.y, _x.object.x, _x.object.y, _x.radius,) = _get_struct_10qi().unpack(str[start:end])
+      end += 42
+      (_x.one.x, _x.one.y, _x.two.x, _x.two.y, _x.three.x, _x.three.y, _x.four.x, _x.four.y, _x.object.x, _x.object.y, _x.radius,) = _get_struct_10ih().unpack(str[start:end])
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e) #most likely buffer underfill
@@ -148,9 +148,9 @@ _struct_I = genpy.struct_I
 def _get_struct_I():
     global _struct_I
     return _struct_I
-_struct_10qi = None
-def _get_struct_10qi():
-    global _struct_10qi
-    if _struct_10qi is None:
-        _struct_10qi = struct.Struct("<10qi")
-    return _struct_10qi
+_struct_10ih = None
+def _get_struct_10ih():
+    global _struct_10ih
+    if _struct_10ih is None:
+        _struct_10ih = struct.Struct("<10ih")
+    return _struct_10ih

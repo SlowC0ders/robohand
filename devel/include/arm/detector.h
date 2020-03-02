@@ -63,7 +63,7 @@ struct detector_
    typedef  ::arm::coord_<ContainerAllocator>  _object_type;
   _object_type object;
 
-   typedef int32_t _radius_type;
+   typedef int16_t _radius_type;
   _radius_type radius;
 
 
@@ -144,12 +144,12 @@ struct MD5Sum< ::arm::detector_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "d1c4c6e71faa44d8334b50604b75a51c";
+    return "93aa21638d78edb37fecdca254769315";
   }
 
   static const char* value(const ::arm::detector_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0xd1c4c6e71faa44d8ULL;
-  static const uint64_t static_value2 = 0x334b50604b75a51cULL;
+  static const uint64_t static_value1 = 0x93aa21638d78edb3ULL;
+  static const uint64_t static_value2 = 0x7fecdca254769315ULL;
 };
 
 template<class ContainerAllocator>
@@ -173,12 +173,12 @@ struct Definition< ::arm::detector_<ContainerAllocator> >
 "coord three\n"
 "coord four\n"
 "coord object\n"
-"int32 radius\n"
+"int16 radius\n"
 "\n"
 "================================================================================\n"
 "MSG: arm/coord\n"
-"int64 x\n"
-"int64 y\n"
+"int32 x\n"
+"int32 y\n"
 ;
   }
 
@@ -237,7 +237,7 @@ struct Printer< ::arm::detector_<ContainerAllocator> >
     s << std::endl;
     Printer< ::arm::coord_<ContainerAllocator> >::stream(s, indent + "  ", v.object);
     s << indent << "radius: ";
-    Printer<int32_t>::stream(s, indent + "  ", v.radius);
+    Printer<int16_t>::stream(s, indent + "  ", v.radius);
   }
 };
 

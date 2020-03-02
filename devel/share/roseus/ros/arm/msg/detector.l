@@ -85,8 +85,8 @@
     (send _four :serialization-length)
     ;; arm/coord _object
     (send _object :serialization-length)
-    ;; int32 _radius
-    4
+    ;; int16 _radius
+    2
     ))
   (:serialize
    (&optional strm)
@@ -102,8 +102,8 @@
        (send _four :serialize s)
      ;; arm/coord _object
        (send _object :serialize s)
-     ;; int32 _radius
-       (write-long _radius s)
+     ;; int16 _radius
+       (write-word _radius s)
      ;;
      (if (null strm) (get-output-stream-string s))))
   (:deserialize
@@ -118,13 +118,13 @@
      (send _four :deserialize buf ptr-) (incf ptr- (send _four :serialization-length))
    ;; arm/coord _object
      (send _object :deserialize buf ptr-) (incf ptr- (send _object :serialization-length))
-   ;; int32 _radius
-     (setq _radius (sys::peek buf ptr- :integer)) (incf ptr- 4)
+   ;; int16 _radius
+     (setq _radius (sys::peek buf ptr- :short)) (incf ptr- 2)
    ;;
    self)
   )
 
-(setf (get arm::detector :md5sum-) "d1c4c6e71faa44d8334b50604b75a51c")
+(setf (get arm::detector :md5sum-) "93aa21638d78edb37fecdca254769315")
 (setf (get arm::detector :datatype-) "arm/detector")
 (setf (get arm::detector :definition-)
       "coord one
@@ -132,17 +132,17 @@ coord two
 coord three
 coord four
 coord object
-int32 radius
+int16 radius
 
 ================================================================================
 MSG: arm/coord
-int64 x
-int64 y
+int32 x
+int32 y
 
 ")
 
 
 
-(provide :arm/detector "d1c4c6e71faa44d8334b50604b75a51c")
+(provide :arm/detector "93aa21638d78edb37fecdca254769315")
 
 

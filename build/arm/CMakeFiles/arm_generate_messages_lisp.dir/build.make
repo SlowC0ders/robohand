@@ -54,7 +54,9 @@ CMAKE_BINARY_DIR = /home/johnnyname/arm_ws/build
 include arm/CMakeFiles/arm_generate_messages_lisp.dir/progress.make
 
 arm/CMakeFiles/arm_generate_messages_lisp: /home/johnnyname/arm_ws/devel/share/common-lisp/ros/arm/msg/coord.lisp
+arm/CMakeFiles/arm_generate_messages_lisp: /home/johnnyname/arm_ws/devel/share/common-lisp/ros/arm/msg/angles.lisp
 arm/CMakeFiles/arm_generate_messages_lisp: /home/johnnyname/arm_ws/devel/share/common-lisp/ros/arm/msg/detector.lisp
+arm/CMakeFiles/arm_generate_messages_lisp: /home/johnnyname/arm_ws/devel/share/common-lisp/ros/arm/msg/converter.lisp
 
 
 /home/johnnyname/arm_ws/devel/share/common-lisp/ros/arm/msg/coord.lisp: /opt/ros/melodic/lib/genlisp/gen_lisp.py
@@ -62,15 +64,28 @@ arm/CMakeFiles/arm_generate_messages_lisp: /home/johnnyname/arm_ws/devel/share/c
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/johnnyname/arm_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Lisp code from arm/coord.msg"
 	cd /home/johnnyname/arm_ws/build/arm && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/johnnyname/arm_ws/src/arm/msg/coord.msg -Iarm:/home/johnnyname/arm_ws/src/arm/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p arm -o /home/johnnyname/arm_ws/devel/share/common-lisp/ros/arm/msg
 
+/home/johnnyname/arm_ws/devel/share/common-lisp/ros/arm/msg/angles.lisp: /opt/ros/melodic/lib/genlisp/gen_lisp.py
+/home/johnnyname/arm_ws/devel/share/common-lisp/ros/arm/msg/angles.lisp: /home/johnnyname/arm_ws/src/arm/msg/angles.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/johnnyname/arm_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Lisp code from arm/angles.msg"
+	cd /home/johnnyname/arm_ws/build/arm && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/johnnyname/arm_ws/src/arm/msg/angles.msg -Iarm:/home/johnnyname/arm_ws/src/arm/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p arm -o /home/johnnyname/arm_ws/devel/share/common-lisp/ros/arm/msg
+
 /home/johnnyname/arm_ws/devel/share/common-lisp/ros/arm/msg/detector.lisp: /opt/ros/melodic/lib/genlisp/gen_lisp.py
 /home/johnnyname/arm_ws/devel/share/common-lisp/ros/arm/msg/detector.lisp: /home/johnnyname/arm_ws/src/arm/msg/detector.msg
 /home/johnnyname/arm_ws/devel/share/common-lisp/ros/arm/msg/detector.lisp: /home/johnnyname/arm_ws/src/arm/msg/coord.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/johnnyname/arm_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Lisp code from arm/detector.msg"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/johnnyname/arm_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Lisp code from arm/detector.msg"
 	cd /home/johnnyname/arm_ws/build/arm && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/johnnyname/arm_ws/src/arm/msg/detector.msg -Iarm:/home/johnnyname/arm_ws/src/arm/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p arm -o /home/johnnyname/arm_ws/devel/share/common-lisp/ros/arm/msg
+
+/home/johnnyname/arm_ws/devel/share/common-lisp/ros/arm/msg/converter.lisp: /opt/ros/melodic/lib/genlisp/gen_lisp.py
+/home/johnnyname/arm_ws/devel/share/common-lisp/ros/arm/msg/converter.lisp: /home/johnnyname/arm_ws/src/arm/msg/converter.msg
+/home/johnnyname/arm_ws/devel/share/common-lisp/ros/arm/msg/converter.lisp: /home/johnnyname/arm_ws/src/arm/msg/coord.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/johnnyname/arm_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Lisp code from arm/converter.msg"
+	cd /home/johnnyname/arm_ws/build/arm && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/johnnyname/arm_ws/src/arm/msg/converter.msg -Iarm:/home/johnnyname/arm_ws/src/arm/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p arm -o /home/johnnyname/arm_ws/devel/share/common-lisp/ros/arm/msg
 
 arm_generate_messages_lisp: arm/CMakeFiles/arm_generate_messages_lisp
 arm_generate_messages_lisp: /home/johnnyname/arm_ws/devel/share/common-lisp/ros/arm/msg/coord.lisp
+arm_generate_messages_lisp: /home/johnnyname/arm_ws/devel/share/common-lisp/ros/arm/msg/angles.lisp
 arm_generate_messages_lisp: /home/johnnyname/arm_ws/devel/share/common-lisp/ros/arm/msg/detector.lisp
+arm_generate_messages_lisp: /home/johnnyname/arm_ws/devel/share/common-lisp/ros/arm/msg/converter.lisp
 arm_generate_messages_lisp: arm/CMakeFiles/arm_generate_messages_lisp.dir/build.make
 
 .PHONY : arm_generate_messages_lisp

@@ -54,7 +54,9 @@ CMAKE_BINARY_DIR = /home/johnnyname/arm_ws/build
 include arm/CMakeFiles/arm_generate_messages_eus.dir/progress.make
 
 arm/CMakeFiles/arm_generate_messages_eus: /home/johnnyname/arm_ws/devel/share/roseus/ros/arm/msg/coord.l
+arm/CMakeFiles/arm_generate_messages_eus: /home/johnnyname/arm_ws/devel/share/roseus/ros/arm/msg/angles.l
 arm/CMakeFiles/arm_generate_messages_eus: /home/johnnyname/arm_ws/devel/share/roseus/ros/arm/msg/detector.l
+arm/CMakeFiles/arm_generate_messages_eus: /home/johnnyname/arm_ws/devel/share/roseus/ros/arm/msg/converter.l
 arm/CMakeFiles/arm_generate_messages_eus: /home/johnnyname/arm_ws/devel/share/roseus/ros/arm/manifest.l
 
 
@@ -63,19 +65,32 @@ arm/CMakeFiles/arm_generate_messages_eus: /home/johnnyname/arm_ws/devel/share/ro
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/johnnyname/arm_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating EusLisp code from arm/coord.msg"
 	cd /home/johnnyname/arm_ws/build/arm && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/johnnyname/arm_ws/src/arm/msg/coord.msg -Iarm:/home/johnnyname/arm_ws/src/arm/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p arm -o /home/johnnyname/arm_ws/devel/share/roseus/ros/arm/msg
 
+/home/johnnyname/arm_ws/devel/share/roseus/ros/arm/msg/angles.l: /opt/ros/melodic/lib/geneus/gen_eus.py
+/home/johnnyname/arm_ws/devel/share/roseus/ros/arm/msg/angles.l: /home/johnnyname/arm_ws/src/arm/msg/angles.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/johnnyname/arm_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating EusLisp code from arm/angles.msg"
+	cd /home/johnnyname/arm_ws/build/arm && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/johnnyname/arm_ws/src/arm/msg/angles.msg -Iarm:/home/johnnyname/arm_ws/src/arm/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p arm -o /home/johnnyname/arm_ws/devel/share/roseus/ros/arm/msg
+
 /home/johnnyname/arm_ws/devel/share/roseus/ros/arm/msg/detector.l: /opt/ros/melodic/lib/geneus/gen_eus.py
 /home/johnnyname/arm_ws/devel/share/roseus/ros/arm/msg/detector.l: /home/johnnyname/arm_ws/src/arm/msg/detector.msg
 /home/johnnyname/arm_ws/devel/share/roseus/ros/arm/msg/detector.l: /home/johnnyname/arm_ws/src/arm/msg/coord.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/johnnyname/arm_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating EusLisp code from arm/detector.msg"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/johnnyname/arm_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating EusLisp code from arm/detector.msg"
 	cd /home/johnnyname/arm_ws/build/arm && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/johnnyname/arm_ws/src/arm/msg/detector.msg -Iarm:/home/johnnyname/arm_ws/src/arm/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p arm -o /home/johnnyname/arm_ws/devel/share/roseus/ros/arm/msg
 
+/home/johnnyname/arm_ws/devel/share/roseus/ros/arm/msg/converter.l: /opt/ros/melodic/lib/geneus/gen_eus.py
+/home/johnnyname/arm_ws/devel/share/roseus/ros/arm/msg/converter.l: /home/johnnyname/arm_ws/src/arm/msg/converter.msg
+/home/johnnyname/arm_ws/devel/share/roseus/ros/arm/msg/converter.l: /home/johnnyname/arm_ws/src/arm/msg/coord.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/johnnyname/arm_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating EusLisp code from arm/converter.msg"
+	cd /home/johnnyname/arm_ws/build/arm && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/johnnyname/arm_ws/src/arm/msg/converter.msg -Iarm:/home/johnnyname/arm_ws/src/arm/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p arm -o /home/johnnyname/arm_ws/devel/share/roseus/ros/arm/msg
+
 /home/johnnyname/arm_ws/devel/share/roseus/ros/arm/manifest.l: /opt/ros/melodic/lib/geneus/gen_eus.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/johnnyname/arm_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating EusLisp manifest code for arm"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/johnnyname/arm_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating EusLisp manifest code for arm"
 	cd /home/johnnyname/arm_ws/build/arm && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/geneus/cmake/../../../lib/geneus/gen_eus.py -m -o /home/johnnyname/arm_ws/devel/share/roseus/ros/arm arm std_msgs
 
 arm_generate_messages_eus: arm/CMakeFiles/arm_generate_messages_eus
 arm_generate_messages_eus: /home/johnnyname/arm_ws/devel/share/roseus/ros/arm/msg/coord.l
+arm_generate_messages_eus: /home/johnnyname/arm_ws/devel/share/roseus/ros/arm/msg/angles.l
 arm_generate_messages_eus: /home/johnnyname/arm_ws/devel/share/roseus/ros/arm/msg/detector.l
+arm_generate_messages_eus: /home/johnnyname/arm_ws/devel/share/roseus/ros/arm/msg/converter.l
 arm_generate_messages_eus: /home/johnnyname/arm_ws/devel/share/roseus/ros/arm/manifest.l
 arm_generate_messages_eus: arm/CMakeFiles/arm_generate_messages_eus.dir/build.make
 

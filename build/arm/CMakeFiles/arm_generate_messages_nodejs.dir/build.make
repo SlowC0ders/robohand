@@ -54,7 +54,9 @@ CMAKE_BINARY_DIR = /home/johnnyname/arm_ws/build
 include arm/CMakeFiles/arm_generate_messages_nodejs.dir/progress.make
 
 arm/CMakeFiles/arm_generate_messages_nodejs: /home/johnnyname/arm_ws/devel/share/gennodejs/ros/arm/msg/coord.js
+arm/CMakeFiles/arm_generate_messages_nodejs: /home/johnnyname/arm_ws/devel/share/gennodejs/ros/arm/msg/angles.js
 arm/CMakeFiles/arm_generate_messages_nodejs: /home/johnnyname/arm_ws/devel/share/gennodejs/ros/arm/msg/detector.js
+arm/CMakeFiles/arm_generate_messages_nodejs: /home/johnnyname/arm_ws/devel/share/gennodejs/ros/arm/msg/converter.js
 
 
 /home/johnnyname/arm_ws/devel/share/gennodejs/ros/arm/msg/coord.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
@@ -62,15 +64,28 @@ arm/CMakeFiles/arm_generate_messages_nodejs: /home/johnnyname/arm_ws/devel/share
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/johnnyname/arm_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Javascript code from arm/coord.msg"
 	cd /home/johnnyname/arm_ws/build/arm && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/johnnyname/arm_ws/src/arm/msg/coord.msg -Iarm:/home/johnnyname/arm_ws/src/arm/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p arm -o /home/johnnyname/arm_ws/devel/share/gennodejs/ros/arm/msg
 
+/home/johnnyname/arm_ws/devel/share/gennodejs/ros/arm/msg/angles.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
+/home/johnnyname/arm_ws/devel/share/gennodejs/ros/arm/msg/angles.js: /home/johnnyname/arm_ws/src/arm/msg/angles.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/johnnyname/arm_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Javascript code from arm/angles.msg"
+	cd /home/johnnyname/arm_ws/build/arm && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/johnnyname/arm_ws/src/arm/msg/angles.msg -Iarm:/home/johnnyname/arm_ws/src/arm/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p arm -o /home/johnnyname/arm_ws/devel/share/gennodejs/ros/arm/msg
+
 /home/johnnyname/arm_ws/devel/share/gennodejs/ros/arm/msg/detector.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
 /home/johnnyname/arm_ws/devel/share/gennodejs/ros/arm/msg/detector.js: /home/johnnyname/arm_ws/src/arm/msg/detector.msg
 /home/johnnyname/arm_ws/devel/share/gennodejs/ros/arm/msg/detector.js: /home/johnnyname/arm_ws/src/arm/msg/coord.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/johnnyname/arm_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Javascript code from arm/detector.msg"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/johnnyname/arm_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Javascript code from arm/detector.msg"
 	cd /home/johnnyname/arm_ws/build/arm && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/johnnyname/arm_ws/src/arm/msg/detector.msg -Iarm:/home/johnnyname/arm_ws/src/arm/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p arm -o /home/johnnyname/arm_ws/devel/share/gennodejs/ros/arm/msg
+
+/home/johnnyname/arm_ws/devel/share/gennodejs/ros/arm/msg/converter.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
+/home/johnnyname/arm_ws/devel/share/gennodejs/ros/arm/msg/converter.js: /home/johnnyname/arm_ws/src/arm/msg/converter.msg
+/home/johnnyname/arm_ws/devel/share/gennodejs/ros/arm/msg/converter.js: /home/johnnyname/arm_ws/src/arm/msg/coord.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/johnnyname/arm_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Javascript code from arm/converter.msg"
+	cd /home/johnnyname/arm_ws/build/arm && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/johnnyname/arm_ws/src/arm/msg/converter.msg -Iarm:/home/johnnyname/arm_ws/src/arm/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p arm -o /home/johnnyname/arm_ws/devel/share/gennodejs/ros/arm/msg
 
 arm_generate_messages_nodejs: arm/CMakeFiles/arm_generate_messages_nodejs
 arm_generate_messages_nodejs: /home/johnnyname/arm_ws/devel/share/gennodejs/ros/arm/msg/coord.js
+arm_generate_messages_nodejs: /home/johnnyname/arm_ws/devel/share/gennodejs/ros/arm/msg/angles.js
 arm_generate_messages_nodejs: /home/johnnyname/arm_ws/devel/share/gennodejs/ros/arm/msg/detector.js
+arm_generate_messages_nodejs: /home/johnnyname/arm_ws/devel/share/gennodejs/ros/arm/msg/converter.js
 arm_generate_messages_nodejs: arm/CMakeFiles/arm_generate_messages_nodejs.dir/build.make
 
 .PHONY : arm_generate_messages_nodejs

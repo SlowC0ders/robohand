@@ -79,7 +79,7 @@ class detector {
     // Serialize message field [object]
     bufferOffset = coord.serialize(obj.object, buffer, bufferOffset);
     // Serialize message field [radius]
-    bufferOffset = _serializer.int32(obj.radius, buffer, bufferOffset);
+    bufferOffset = _serializer.int16(obj.radius, buffer, bufferOffset);
     return bufferOffset;
   }
 
@@ -98,12 +98,12 @@ class detector {
     // Deserialize message field [object]
     data.object = coord.deserialize(buffer, bufferOffset);
     // Deserialize message field [radius]
-    data.radius = _deserializer.int32(buffer, bufferOffset);
+    data.radius = _deserializer.int16(buffer, bufferOffset);
     return data;
   }
 
   static getMessageSize(object) {
-    return 84;
+    return 42;
   }
 
   static datatype() {
@@ -113,7 +113,7 @@ class detector {
 
   static md5sum() {
     //Returns md5sum for a message object
-    return 'd1c4c6e71faa44d8334b50604b75a51c';
+    return '93aa21638d78edb37fecdca254769315';
   }
 
   static messageDefinition() {
@@ -124,12 +124,12 @@ class detector {
     coord three
     coord four
     coord object
-    int32 radius
+    int16 radius
     
     ================================================================================
     MSG: arm/coord
-    int64 x
-    int64 y
+    int32 x
+    int32 y
     
     `;
   }

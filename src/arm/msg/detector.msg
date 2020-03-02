@@ -3,4 +3,4 @@ coord two
 coord three
 coord four
 coord object
-int32 radius
+int16 radius

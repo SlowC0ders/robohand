@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.context.in
 
-messages_str = "/home/johnnyname/arm_ws/src/arm/msg/coord.msg;/home/johnnyname/arm_ws/src/arm/msg/detector.msg"
+messages_str = "/home/johnnyname/arm_ws/src/arm/msg/coord.msg;/home/johnnyname/arm_ws/src/arm/msg/detector.msg;/home/johnnyname/arm_ws/src/arm/msg/angles.msg;/home/johnnyname/arm_ws/src/arm/msg/converter.msg"
 services_str = ""
 pkg_name = "arm"
 dependencies_str = "std_msgs"

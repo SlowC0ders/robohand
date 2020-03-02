@@ -41,6 +41,8 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/arm/msg" TYPE FILE FILES
     "/home/johnnyname/arm_ws/src/arm/msg/coord.msg"
     "/home/johnnyname/arm_ws/src/arm/msg/detector.msg"
+    "/home/johnnyname/arm_ws/src/arm/msg/angles.msg"
+    "/home/johnnyname/arm_ws/src/arm/msg/converter.msg"
     )
 endif()
 

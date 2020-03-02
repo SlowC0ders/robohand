@@ -287,6 +287,8 @@ _gtest_SOURCES:FILEPATH=/usr/src/gtest/src/gtest.cc
 //Value Computed by CMake
 arm_BINARY_DIR:STATIC=/home/johnnyname/arm_ws/build/arm
 
+arm_DIR:PATH=
+
 //Value Computed by CMake
 arm_SOURCE_DIR:STATIC=/home/johnnyname/arm_ws/src/arm
 

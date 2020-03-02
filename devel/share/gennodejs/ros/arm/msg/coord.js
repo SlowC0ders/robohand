@@ -40,9 +40,9 @@ class coord {
   static serialize(obj, buffer, bufferOffset) {
     // Serializes a message object of type coord
     // Serialize message field [x]
-    bufferOffset = _serializer.int64(obj.x, buffer, bufferOffset);
+    bufferOffset = _serializer.int32(obj.x, buffer, bufferOffset);
     // Serialize message field [y]
-    bufferOffset = _serializer.int64(obj.y, buffer, bufferOffset);
+    bufferOffset = _serializer.int32(obj.y, buffer, bufferOffset);
     return bufferOffset;
   }
 
@@ -51,14 +51,14 @@ class coord {
     let len;
     let data = new coord(null);
     // Deserialize message field [x]
-    data.x = _deserializer.int64(buffer, bufferOffset);
+    data.x = _deserializer.int32(buffer, bufferOffset);
     // Deserialize message field [y]
-    data.y = _deserializer.int64(buffer, bufferOffset);
+    data.y = _deserializer.int32(buffer, bufferOffset);
     return data;
   }
 
   static getMessageSize(object) {
-    return 16;
+    return 8;
   }
 
   static datatype() {
@@ -68,14 +68,14 @@ class coord {
 
   static md5sum() {
     //Returns md5sum for a message object
-    return '3b834ede922a0fff22c43585c533b49f';
+    return 'bd7b43fd41d4c47bf5c703cc7d016709';
   }
 
   static messageDefinition() {
     // Returns full string definition for message
     return `
-    int64 x
-    int64 y
+    int32 x
+    int32 y
     
     `;
   }

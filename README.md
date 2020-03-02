@@ -39,3 +39,22 @@ In order to work with ROS you must:
   
 Every changes in the project are assembeled by "catkin_make" command:
     catkin_make
+
+### How run system
+If you have made all mentioned above (espetialy run setup.bash), then you can run system (now we can make run it only by hands :[).
+1. Run the system core with command:
+```
+    roscore
+```
+2. Look there, if you want /src/arm/scrips/detector.py
+  * Here you can find the file for first task (Image analysis).
+  * In order to run this node, you must type that command:
+```
+    rosrun arm detector.py
+```
+3. Ang here we have another important part /src/arm/src/converter.cpp
+  * That part responsible for mathematical calculation for the purpose to determine real coordinates.
+  * In order to run this node, you must type that command:
+```
+    rosrun arm converter
+```

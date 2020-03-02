@@ -54,7 +54,9 @@ CMAKE_BINARY_DIR = /home/johnnyname/arm_ws/build
 include arm/CMakeFiles/arm_generate_messages_py.dir/progress.make
 
 arm/CMakeFiles/arm_generate_messages_py: /home/johnnyname/arm_ws/devel/lib/python2.7/dist-packages/arm/msg/_coord.py
+arm/CMakeFiles/arm_generate_messages_py: /home/johnnyname/arm_ws/devel/lib/python2.7/dist-packages/arm/msg/_angles.py
 arm/CMakeFiles/arm_generate_messages_py: /home/johnnyname/arm_ws/devel/lib/python2.7/dist-packages/arm/msg/_detector.py
+arm/CMakeFiles/arm_generate_messages_py: /home/johnnyname/arm_ws/devel/lib/python2.7/dist-packages/arm/msg/_converter.py
 arm/CMakeFiles/arm_generate_messages_py: /home/johnnyname/arm_ws/devel/lib/python2.7/dist-packages/arm/msg/__init__.py
 
 
@@ -63,21 +65,36 @@ arm/CMakeFiles/arm_generate_messages_py: /home/johnnyname/arm_ws/devel/lib/pytho
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/johnnyname/arm_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python from MSG arm/coord"
 	cd /home/johnnyname/arm_ws/build/arm && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/johnnyname/arm_ws/src/arm/msg/coord.msg -Iarm:/home/johnnyname/arm_ws/src/arm/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p arm -o /home/johnnyname/arm_ws/devel/lib/python2.7/dist-packages/arm/msg
 
+/home/johnnyname/arm_ws/devel/lib/python2.7/dist-packages/arm/msg/_angles.py: /opt/ros/melodic/lib/genpy/genmsg_py.py
+/home/johnnyname/arm_ws/devel/lib/python2.7/dist-packages/arm/msg/_angles.py: /home/johnnyname/arm_ws/src/arm/msg/angles.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/johnnyname/arm_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python from MSG arm/angles"
+	cd /home/johnnyname/arm_ws/build/arm && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/johnnyname/arm_ws/src/arm/msg/angles.msg -Iarm:/home/johnnyname/arm_ws/src/arm/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p arm -o /home/johnnyname/arm_ws/devel/lib/python2.7/dist-packages/arm/msg
+
 /home/johnnyname/arm_ws/devel/lib/python2.7/dist-packages/arm/msg/_detector.py: /opt/ros/melodic/lib/genpy/genmsg_py.py
 /home/johnnyname/arm_ws/devel/lib/python2.7/dist-packages/arm/msg/_detector.py: /home/johnnyname/arm_ws/src/arm/msg/detector.msg
 /home/johnnyname/arm_ws/devel/lib/python2.7/dist-packages/arm/msg/_detector.py: /home/johnnyname/arm_ws/src/arm/msg/coord.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/johnnyname/arm_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python from MSG arm/detector"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/johnnyname/arm_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Python from MSG arm/detector"
 	cd /home/johnnyname/arm_ws/build/arm && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/johnnyname/arm_ws/src/arm/msg/detector.msg -Iarm:/home/johnnyname/arm_ws/src/arm/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p arm -o /home/johnnyname/arm_ws/devel/lib/python2.7/dist-packages/arm/msg
+
+/home/johnnyname/arm_ws/devel/lib/python2.7/dist-packages/arm/msg/_converter.py: /opt/ros/melodic/lib/genpy/genmsg_py.py
+/home/johnnyname/arm_ws/devel/lib/python2.7/dist-packages/arm/msg/_converter.py: /home/johnnyname/arm_ws/src/arm/msg/converter.msg
+/home/johnnyname/arm_ws/devel/lib/python2.7/dist-packages/arm/msg/_converter.py: /home/johnnyname/arm_ws/src/arm/msg/coord.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/johnnyname/arm_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Python from MSG arm/converter"
+	cd /home/johnnyname/arm_ws/build/arm && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/johnnyname/arm_ws/src/arm/msg/converter.msg -Iarm:/home/johnnyname/arm_ws/src/arm/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p arm -o /home/johnnyname/arm_ws/devel/lib/python2.7/dist-packages/arm/msg
 
 /home/johnnyname/arm_ws/devel/lib/python2.7/dist-packages/arm/msg/__init__.py: /opt/ros/melodic/lib/genpy/genmsg_py.py
 /home/johnnyname/arm_ws/devel/lib/python2.7/dist-packages/arm/msg/__init__.py: /home/johnnyname/arm_ws/devel/lib/python2.7/dist-packages/arm/msg/_coord.py
+/home/johnnyname/arm_ws/devel/lib/python2.7/dist-packages/arm/msg/__init__.py: /home/johnnyname/arm_ws/devel/lib/python2.7/dist-packages/arm/msg/_angles.py
 /home/johnnyname/arm_ws/devel/lib/python2.7/dist-packages/arm/msg/__init__.py: /home/johnnyname/arm_ws/devel/lib/python2.7/dist-packages/arm/msg/_detector.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/johnnyname/arm_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Python msg __init__.py for arm"
+/home/johnnyname/arm_ws/devel/lib/python2.7/dist-packages/arm/msg/__init__.py: /home/johnnyname/arm_ws/devel/lib/python2.7/dist-packages/arm/msg/_converter.py
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/johnnyname/arm_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating Python msg __init__.py for arm"
 	cd /home/johnnyname/arm_ws/build/arm && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/johnnyname/arm_ws/devel/lib/python2.7/dist-packages/arm/msg --initpy
 
 arm_generate_messages_py: arm/CMakeFiles/arm_generate_messages_py
 arm_generate_messages_py: /home/johnnyname/arm_ws/devel/lib/python2.7/dist-packages/arm/msg/_coord.py
+arm_generate_messages_py: /home/johnnyname/arm_ws/devel/lib/python2.7/dist-packages/arm/msg/_angles.py
 arm_generate_messages_py: /home/johnnyname/arm_ws/devel/lib/python2.7/dist-packages/arm/msg/_detector.py
+arm_generate_messages_py: /home/johnnyname/arm_ws/devel/lib/python2.7/dist-packages/arm/msg/_converter.py
 arm_generate_messages_py: /home/johnnyname/arm_ws/devel/lib/python2.7/dist-packages/arm/msg/__init__.py
 arm_generate_messages_py: arm/CMakeFiles/arm_generate_messages_py.dir/build.make
 

@@ -1,7 +1,9 @@
 file(REMOVE_RECURSE
   "CMakeFiles/arm_generate_messages_py"
   "/home/johnnyname/arm_ws/devel/lib/python2.7/dist-packages/arm/msg/_coord.py"
+  "/home/johnnyname/arm_ws/devel/lib/python2.7/dist-packages/arm/msg/_angles.py"
   "/home/johnnyname/arm_ws/devel/lib/python2.7/dist-packages/arm/msg/_detector.py"
+  "/home/johnnyname/arm_ws/devel/lib/python2.7/dist-packages/arm/msg/_converter.py"
   "/home/johnnyname/arm_ws/devel/lib/python2.7/dist-packages/arm/msg/__init__.py"
 )
 

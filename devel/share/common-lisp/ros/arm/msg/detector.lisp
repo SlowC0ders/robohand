@@ -35,7 +35,7 @@
    (radius
     :reader radius
     :initarg :radius
-    :type cl:integer
+    :type cl:fixnum
     :initform 0))
 )
 
@@ -83,11 +83,9 @@
   (roslisp-msg-protocol:serialize (cl:slot-value msg 'three) ostream)
   (roslisp-msg-protocol:serialize (cl:slot-value msg 'four) ostream)
   (roslisp-msg-protocol:serialize (cl:slot-value msg 'object) ostream)
-  (cl:let* ((signed (cl:slot-value msg 'radius)) (unsigned (cl:if (cl:< signed 0) (cl:+ signed 4294967296) signed)))
+  (cl:let* ((signed (cl:slot-value msg 'radius)) (unsigned (cl:if (cl:< signed 0) (cl:+ signed 65536) signed)))
     (cl:write-byte (cl:ldb (cl:byte 8 0) unsigned) ostream)
     (cl:write-byte (cl:ldb (cl:byte 8 8) unsigned) ostream)
-    (cl:write-byte (cl:ldb (cl:byte 8 16) unsigned) ostream)
-    (cl:write-byte (cl:ldb (cl:byte 8 24) unsigned) ostream)
     )
 )
 (cl:defmethod roslisp-msg-protocol:deserialize ((msg <detector>) istream)
@@ -100,9 +98,7 @@
     (cl:let ((unsigned 0))
       (cl:setf (cl:ldb (cl:byte 8 0) unsigned) (cl:read-byte istream))
       (cl:setf (cl:ldb (cl:byte 8 8) unsigned) (cl:read-byte istream))
-      (cl:setf (cl:ldb (cl:byte 8 16) unsigned) (cl:read-byte istream))
-      (cl:setf (cl:ldb (cl:byte 8 24) unsigned) (cl:read-byte istream))
-      (cl:setf (cl:slot-value msg 'radius) (cl:if (cl:< unsigned 2147483648) unsigned (cl:- unsigned 4294967296))))
+      (cl:setf (cl:slot-value msg 'radius) (cl:if (cl:< unsigned 32768) unsigned (cl:- unsigned 65536))))
   msg
 )
 (cl:defmethod roslisp-msg-protocol:ros-datatype ((msg (cl:eql '<detector>)))
@@ -113,16 +109,16 @@
   "arm/detector")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql '<detector>)))
   "Returns md5sum for a message object of type '<detector>"
-  "d1c4c6e71faa44d8334b50604b75a51c")
+  "93aa21638d78edb37fecdca254769315")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql 'detector)))
   "Returns md5sum for a message object of type 'detector"
-  "d1c4c6e71faa44d8334b50604b75a51c")
+  "93aa21638d78edb37fecdca254769315")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<detector>)))
   "Returns full string definition for message of type '<detector>"
-  (cl:format cl:nil "coord one~%coord two~%coord three~%coord four~%coord object~%int32 radius~%~%================================================================================~%MSG: arm/coord~%int64 x~%int64 y~%~%~%"))
+  (cl:format cl:nil "coord one~%coord two~%coord three~%coord four~%coord object~%int16 radius~%~%================================================================================~%MSG: arm/coord~%int32 x~%int32 y~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql 'detector)))
   "Returns full string definition for message of type 'detector"
-  (cl:format cl:nil "coord one~%coord two~%coord three~%coord four~%coord object~%int32 radius~%~%================================================================================~%MSG: arm/coord~%int64 x~%int64 y~%~%~%"))
+  (cl:format cl:nil "coord one~%coord two~%coord three~%coord four~%coord object~%int16 radius~%~%================================================================================~%MSG: arm/coord~%int32 x~%int32 y~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:serialization-length ((msg <detector>))
   (cl:+ 0
      (roslisp-msg-protocol:serialization-length (cl:slot-value msg 'one))
@@ -130,7 +126,7 @@
      (roslisp-msg-protocol:serialization-length (cl:slot-value msg 'three))
      (roslisp-msg-protocol:serialization-length (cl:slot-value msg 'four))
      (roslisp-msg-protocol:serialization-length (cl:slot-value msg 'object))
-     4
+     2
 ))
 (cl:defmethod roslisp-msg-protocol:ros-message-to-list ((msg <detector>))
   "Converts a ROS message object to a list"

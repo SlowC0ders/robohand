@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.cmake.em
 
-message(STATUS "arm: 2 messages, 0 services")
+message(STATUS "arm: 4 messages, 0 services")
 
 set(MSG_I_FLAGS "-Iarm:/home/johnnyname/arm_ws/src/arm/msg;-Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg")
 
@@ -27,6 +27,16 @@ add_custom_target(_arm_generate_messages_check_deps_${_filename}
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "arm" "/home/johnnyname/arm_ws/src/arm/msg/detector.msg" "arm/coord"
 )
 
+get_filename_component(_filename "/home/johnnyname/arm_ws/src/arm/msg/angles.msg" NAME_WE)
+add_custom_target(_arm_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "arm" "/home/johnnyname/arm_ws/src/arm/msg/angles.msg" ""
+)
+
+get_filename_component(_filename "/home/johnnyname/arm_ws/src/arm/msg/converter.msg" NAME_WE)
+add_custom_target(_arm_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "arm" "/home/johnnyname/arm_ws/src/arm/msg/converter.msg" "arm/coord"
+)
+
 #
 #  langs = gencpp;geneus;genlisp;gennodejs;genpy
 #
@@ -40,7 +50,19 @@ _generate_msg_cpp(arm
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/arm
 )
 _generate_msg_cpp(arm
+  "/home/johnnyname/arm_ws/src/arm/msg/angles.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/arm
+)
+_generate_msg_cpp(arm
   "/home/johnnyname/arm_ws/src/arm/msg/detector.msg"
+  "${MSG_I_FLAGS}"
+  "/home/johnnyname/arm_ws/src/arm/msg/coord.msg"
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/arm
+)
+_generate_msg_cpp(arm
+  "/home/johnnyname/arm_ws/src/arm/msg/converter.msg"
   "${MSG_I_FLAGS}"
   "/home/johnnyname/arm_ws/src/arm/msg/coord.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/arm
@@ -64,6 +86,10 @@ get_filename_component(_filename "/home/johnnyname/arm_ws/src/arm/msg/coord.msg"
 add_dependencies(arm_generate_messages_cpp _arm_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/johnnyname/arm_ws/src/arm/msg/detector.msg" NAME_WE)
 add_dependencies(arm_generate_messages_cpp _arm_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/johnnyname/arm_ws/src/arm/msg/angles.msg" NAME_WE)
+add_dependencies(arm_generate_messages_cpp _arm_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/johnnyname/arm_ws/src/arm/msg/converter.msg" NAME_WE)
+add_dependencies(arm_generate_messages_cpp _arm_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(arm_gencpp)
@@ -81,7 +107,19 @@ _generate_msg_eus(arm
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/arm
 )
 _generate_msg_eus(arm
+  "/home/johnnyname/arm_ws/src/arm/msg/angles.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/arm
+)
+_generate_msg_eus(arm
   "/home/johnnyname/arm_ws/src/arm/msg/detector.msg"
+  "${MSG_I_FLAGS}"
+  "/home/johnnyname/arm_ws/src/arm/msg/coord.msg"
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/arm
+)
+_generate_msg_eus(arm
+  "/home/johnnyname/arm_ws/src/arm/msg/converter.msg"
   "${MSG_I_FLAGS}"
   "/home/johnnyname/arm_ws/src/arm/msg/coord.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/arm
@@ -105,6 +143,10 @@ get_filename_component(_filename "/home/johnnyname/arm_ws/src/arm/msg/coord.msg"
 add_dependencies(arm_generate_messages_eus _arm_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/johnnyname/arm_ws/src/arm/msg/detector.msg" NAME_WE)
 add_dependencies(arm_generate_messages_eus _arm_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/johnnyname/arm_ws/src/arm/msg/angles.msg" NAME_WE)
+add_dependencies(arm_generate_messages_eus _arm_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/johnnyname/arm_ws/src/arm/msg/converter.msg" NAME_WE)
+add_dependencies(arm_generate_messages_eus _arm_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(arm_geneus)
@@ -122,7 +164,19 @@ _generate_msg_lisp(arm
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/arm
 )
 _generate_msg_lisp(arm
+  "/home/johnnyname/arm_ws/src/arm/msg/angles.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/arm
+)
+_generate_msg_lisp(arm
   "/home/johnnyname/arm_ws/src/arm/msg/detector.msg"
+  "${MSG_I_FLAGS}"
+  "/home/johnnyname/arm_ws/src/arm/msg/coord.msg"
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/arm
+)
+_generate_msg_lisp(arm
+  "/home/johnnyname/arm_ws/src/arm/msg/converter.msg"
   "${MSG_I_FLAGS}"
   "/home/johnnyname/arm_ws/src/arm/msg/coord.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/arm
@@ -146,6 +200,10 @@ get_filename_component(_filename "/home/johnnyname/arm_ws/src/arm/msg/coord.msg"
 add_dependencies(arm_generate_messages_lisp _arm_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/johnnyname/arm_ws/src/arm/msg/detector.msg" NAME_WE)
 add_dependencies(arm_generate_messages_lisp _arm_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/johnnyname/arm_ws/src/arm/msg/angles.msg" NAME_WE)
+add_dependencies(arm_generate_messages_lisp _arm_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/johnnyname/arm_ws/src/arm/msg/converter.msg" NAME_WE)
+add_dependencies(arm_generate_messages_lisp _arm_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(arm_genlisp)
@@ -163,7 +221,19 @@ _generate_msg_nodejs(arm
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/arm
 )
 _generate_msg_nodejs(arm
+  "/home/johnnyname/arm_ws/src/arm/msg/angles.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/arm
+)
+_generate_msg_nodejs(arm
   "/home/johnnyname/arm_ws/src/arm/msg/detector.msg"
+  "${MSG_I_FLAGS}"
+  "/home/johnnyname/arm_ws/src/arm/msg/coord.msg"
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/arm
+)
+_generate_msg_nodejs(arm
+  "/home/johnnyname/arm_ws/src/arm/msg/converter.msg"
   "${MSG_I_FLAGS}"
   "/home/johnnyname/arm_ws/src/arm/msg/coord.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/arm
@@ -187,6 +257,10 @@ get_filename_component(_filename "/home/johnnyname/arm_ws/src/arm/msg/coord.msg"
 add_dependencies(arm_generate_messages_nodejs _arm_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/johnnyname/arm_ws/src/arm/msg/detector.msg" NAME_WE)
 add_dependencies(arm_generate_messages_nodejs _arm_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/johnnyname/arm_ws/src/arm/msg/angles.msg" NAME_WE)
+add_dependencies(arm_generate_messages_nodejs _arm_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/johnnyname/arm_ws/src/arm/msg/converter.msg" NAME_WE)
+add_dependencies(arm_generate_messages_nodejs _arm_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(arm_gennodejs)
@@ -204,7 +278,19 @@ _generate_msg_py(arm
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/arm
 )
 _generate_msg_py(arm
+  "/home/johnnyname/arm_ws/src/arm/msg/angles.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/arm
+)
+_generate_msg_py(arm
   "/home/johnnyname/arm_ws/src/arm/msg/detector.msg"
+  "${MSG_I_FLAGS}"
+  "/home/johnnyname/arm_ws/src/arm/msg/coord.msg"
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/arm
+)
+_generate_msg_py(arm
+  "/home/johnnyname/arm_ws/src/arm/msg/converter.msg"
   "${MSG_I_FLAGS}"
   "/home/johnnyname/arm_ws/src/arm/msg/coord.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/arm
@@ -227,6 +313,10 @@ add_dependencies(arm_generate_messages arm_generate_messages_py)
 get_filename_component(_filename "/home/johnnyname/arm_ws/src/arm/msg/coord.msg" NAME_WE)
 add_dependencies(arm_generate_messages_py _arm_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/johnnyname/arm_ws/src/arm/msg/detector.msg" NAME_WE)
+add_dependencies(arm_generate_messages_py _arm_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/johnnyname/arm_ws/src/arm/msg/angles.msg" NAME_WE)
+add_dependencies(arm_generate_messages_py _arm_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/johnnyname/arm_ws/src/arm/msg/converter.msg" NAME_WE)
 add_dependencies(arm_generate_messages_py _arm_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility

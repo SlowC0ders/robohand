@@ -1,15 +1,18 @@
+#!/usr/bin/env python
+
 import rospy
-from std_msgs.msg import String
+from arm.msg import detector # import our custom message
 
 def talker():
-    pub = rospy.Publisher('chatter', String, queue_size=10)
-    rospy.init_node('detector', anonymous=True)
-    rate = rospy.Rate(10) # 10Hz. Determine the frequency
-    while not rospy.is_shutdown():
-        hello_str = "hello world %s" % rospy.get_time()
-        rospy.loginfo(hello_str)
-        pub.publish(hello_str)
-        rate.sleep()
+    pub = rospy.Publisher('det_chatter', detector, queue_size=10) # create publisher
+    rospy.init_node('detector', anonymous=True) # node initialisation
+    rate = rospy.Rate(1) # 10Hz. Determine the frequency
+    message = detector() # build message
+    while not rospy.is_shutdown(): # while true (except ctrl+c, kill and duplication)
+        message.object.x = 10;
+	rospy.loginfo(message) # print
+        pub.publish(message) # send to converter
+        rate.sleep() # time balancer
 
 if __name__ == '__main__':
     try:

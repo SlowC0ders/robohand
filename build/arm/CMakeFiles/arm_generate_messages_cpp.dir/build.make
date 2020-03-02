@@ -54,7 +54,9 @@ CMAKE_BINARY_DIR = /home/johnnyname/arm_ws/build
 include arm/CMakeFiles/arm_generate_messages_cpp.dir/progress.make
 
 arm/CMakeFiles/arm_generate_messages_cpp: /home/johnnyname/arm_ws/devel/include/arm/coord.h
+arm/CMakeFiles/arm_generate_messages_cpp: /home/johnnyname/arm_ws/devel/include/arm/angles.h
 arm/CMakeFiles/arm_generate_messages_cpp: /home/johnnyname/arm_ws/devel/include/arm/detector.h
+arm/CMakeFiles/arm_generate_messages_cpp: /home/johnnyname/arm_ws/devel/include/arm/converter.h
 
 
 /home/johnnyname/arm_ws/devel/include/arm/coord.h: /opt/ros/melodic/lib/gencpp/gen_cpp.py
@@ -63,16 +65,31 @@ arm/CMakeFiles/arm_generate_messages_cpp: /home/johnnyname/arm_ws/devel/include/
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/johnnyname/arm_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code from arm/coord.msg"
 	cd /home/johnnyname/arm_ws/src/arm && /home/johnnyname/arm_ws/build/catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/johnnyname/arm_ws/src/arm/msg/coord.msg -Iarm:/home/johnnyname/arm_ws/src/arm/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p arm -o /home/johnnyname/arm_ws/devel/include/arm -e /opt/ros/melodic/share/gencpp/cmake/..
 
+/home/johnnyname/arm_ws/devel/include/arm/angles.h: /opt/ros/melodic/lib/gencpp/gen_cpp.py
+/home/johnnyname/arm_ws/devel/include/arm/angles.h: /home/johnnyname/arm_ws/src/arm/msg/angles.msg
+/home/johnnyname/arm_ws/devel/include/arm/angles.h: /opt/ros/melodic/share/gencpp/msg.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/johnnyname/arm_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating C++ code from arm/angles.msg"
+	cd /home/johnnyname/arm_ws/src/arm && /home/johnnyname/arm_ws/build/catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/johnnyname/arm_ws/src/arm/msg/angles.msg -Iarm:/home/johnnyname/arm_ws/src/arm/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p arm -o /home/johnnyname/arm_ws/devel/include/arm -e /opt/ros/melodic/share/gencpp/cmake/..
+
 /home/johnnyname/arm_ws/devel/include/arm/detector.h: /opt/ros/melodic/lib/gencpp/gen_cpp.py
 /home/johnnyname/arm_ws/devel/include/arm/detector.h: /home/johnnyname/arm_ws/src/arm/msg/detector.msg
 /home/johnnyname/arm_ws/devel/include/arm/detector.h: /home/johnnyname/arm_ws/src/arm/msg/coord.msg
 /home/johnnyname/arm_ws/devel/include/arm/detector.h: /opt/ros/melodic/share/gencpp/msg.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/johnnyname/arm_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating C++ code from arm/detector.msg"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/johnnyname/arm_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating C++ code from arm/detector.msg"
 	cd /home/johnnyname/arm_ws/src/arm && /home/johnnyname/arm_ws/build/catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/johnnyname/arm_ws/src/arm/msg/detector.msg -Iarm:/home/johnnyname/arm_ws/src/arm/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p arm -o /home/johnnyname/arm_ws/devel/include/arm -e /opt/ros/melodic/share/gencpp/cmake/..
+
+/home/johnnyname/arm_ws/devel/include/arm/converter.h: /opt/ros/melodic/lib/gencpp/gen_cpp.py
+/home/johnnyname/arm_ws/devel/include/arm/converter.h: /home/johnnyname/arm_ws/src/arm/msg/converter.msg
+/home/johnnyname/arm_ws/devel/include/arm/converter.h: /home/johnnyname/arm_ws/src/arm/msg/coord.msg
+/home/johnnyname/arm_ws/devel/include/arm/converter.h: /opt/ros/melodic/share/gencpp/msg.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/johnnyname/arm_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating C++ code from arm/converter.msg"
+	cd /home/johnnyname/arm_ws/src/arm && /home/johnnyname/arm_ws/build/catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/johnnyname/arm_ws/src/arm/msg/converter.msg -Iarm:/home/johnnyname/arm_ws/src/arm/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p arm -o /home/johnnyname/arm_ws/devel/include/arm -e /opt/ros/melodic/share/gencpp/cmake/..
 
 arm_generate_messages_cpp: arm/CMakeFiles/arm_generate_messages_cpp
 arm_generate_messages_cpp: /home/johnnyname/arm_ws/devel/include/arm/coord.h
+arm_generate_messages_cpp: /home/johnnyname/arm_ws/devel/include/arm/angles.h
 arm_generate_messages_cpp: /home/johnnyname/arm_ws/devel/include/arm/detector.h
+arm_generate_messages_cpp: /home/johnnyname/arm_ws/devel/include/arm/converter.h
 arm_generate_messages_cpp: arm/CMakeFiles/arm_generate_messages_cpp.dir/build.make
 
 .PHONY : arm_generate_messages_cpp

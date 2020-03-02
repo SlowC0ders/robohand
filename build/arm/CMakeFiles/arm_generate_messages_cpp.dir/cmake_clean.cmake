@@ -1,7 +1,9 @@
 file(REMOVE_RECURSE
   "CMakeFiles/arm_generate_messages_cpp"
   "/home/johnnyname/arm_ws/devel/include/arm/coord.h"
+  "/home/johnnyname/arm_ws/devel/include/arm/angles.h"
   "/home/johnnyname/arm_ws/devel/include/arm/detector.h"
+  "/home/johnnyname/arm_ws/devel/include/arm/converter.h"
 )
 
 # Per-language clean rules from dependency scanning.
