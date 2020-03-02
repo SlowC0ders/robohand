@@ -61,7 +61,7 @@ Every changes in the project are assembeled by "catkin_make" command:
 For more information go there: [catkin_make command](http://wiki.ros.org/ROS/Tutorials/BuildingPackages)
 
 ### How run system
-If you have made all mentioned above (espetialy run setup.bash), then you can run system (now we can make run it only by hands :[).
+If you have made all mentioned above (espetialy run setup.bash), then you can run system (now we can make run it only by hands :[ ).
 1. Run the system core with command:
 ```
     roscore
