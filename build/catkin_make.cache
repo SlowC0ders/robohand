@@ -1,2 +1,0 @@
-arm
--DCATKIN_DEVEL_PREFIX=/home/johnnyname/repos/robohand/devel -DCMAKE_INSTALL_PREFIX=/home/johnnyname/repos/robohand/install -G Unix Makefiles
