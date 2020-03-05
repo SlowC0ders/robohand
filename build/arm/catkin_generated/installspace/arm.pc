@@ -1,4 +1,4 @@
-prefix=/home/johnnyname/arm_ws/install
+prefix=/home/johnnyname/repos/robohand/install
 
 Name: arm
 Description: Description of arm

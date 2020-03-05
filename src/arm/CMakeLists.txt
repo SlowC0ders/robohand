@@ -209,3 +209,6 @@ include_directories(
 add_executable(converter src/converter.cpp)
 target_link_libraries(converter ${catkin_LIBRARIES})
 add_dependencies(converter arm_generate_messages_cpp)
+add_executable(angles src/angles.cpp)
+target_link_libraries(angles ${catkin_LIBRARIES})
+add_dependencies(angles arm_generate_messages_cpp)

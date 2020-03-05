@@ -2,7 +2,7 @@
 
 message(STATUS "arm: 4 messages, 0 services")
 
-set(MSG_I_FLAGS "-Iarm:/home/johnnyname/arm_ws/src/arm/msg;-Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg")
+set(MSG_I_FLAGS "-Iarm:/home/johnnyname/repos/robohand/src/arm/msg;-Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg")
 
 # Find all generators
 find_package(gencpp REQUIRED)
@@ -17,24 +17,24 @@ add_custom_target(arm_generate_messages ALL)
 
 
 
-get_filename_component(_filename "/home/johnnyname/arm_ws/src/arm/msg/coord.msg" NAME_WE)
+get_filename_component(_filename "/home/johnnyname/repos/robohand/src/arm/msg/detector.msg" NAME_WE)
 add_custom_target(_arm_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "arm" "/home/johnnyname/arm_ws/src/arm/msg/coord.msg" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "arm" "/home/johnnyname/repos/robohand/src/arm/msg/detector.msg" "arm/coord"
 )
 
-get_filename_component(_filename "/home/johnnyname/arm_ws/src/arm/msg/detector.msg" NAME_WE)
+get_filename_component(_filename "/home/johnnyname/repos/robohand/src/arm/msg/converter.msg" NAME_WE)
 add_custom_target(_arm_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "arm" "/home/johnnyname/arm_ws/src/arm/msg/detector.msg" "arm/coord"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "arm" "/home/johnnyname/repos/robohand/src/arm/msg/converter.msg" "arm/coord"
 )
 
-get_filename_component(_filename "/home/johnnyname/arm_ws/src/arm/msg/angles.msg" NAME_WE)
+get_filename_component(_filename "/home/johnnyname/repos/robohand/src/arm/msg/coord.msg" NAME_WE)
 add_custom_target(_arm_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "arm" "/home/johnnyname/arm_ws/src/arm/msg/angles.msg" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "arm" "/home/johnnyname/repos/robohand/src/arm/msg/coord.msg" ""
 )
 
-get_filename_component(_filename "/home/johnnyname/arm_ws/src/arm/msg/converter.msg" NAME_WE)
+get_filename_component(_filename "/home/johnnyname/repos/robohand/src/arm/msg/angles.msg" NAME_WE)
 add_custom_target(_arm_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "arm" "/home/johnnyname/arm_ws/src/arm/msg/converter.msg" "arm/coord"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "arm" "/home/johnnyname/repos/robohand/src/arm/msg/angles.msg" ""
 )
 
 #
@@ -44,27 +44,27 @@ add_custom_target(_arm_generate_messages_check_deps_${_filename}
 ### Section generating for lang: gencpp
 ### Generating Messages
 _generate_msg_cpp(arm
-  "/home/johnnyname/arm_ws/src/arm/msg/coord.msg"
+  "/home/johnnyname/repos/robohand/src/arm/msg/detector.msg"
+  "${MSG_I_FLAGS}"
+  "/home/johnnyname/repos/robohand/src/arm/msg/coord.msg"
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/arm
+)
+_generate_msg_cpp(arm
+  "/home/johnnyname/repos/robohand/src/arm/msg/converter.msg"
+  "${MSG_I_FLAGS}"
+  "/home/johnnyname/repos/robohand/src/arm/msg/coord.msg"
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/arm
+)
+_generate_msg_cpp(arm
+  "/home/johnnyname/repos/robohand/src/arm/msg/coord.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/arm
 )
 _generate_msg_cpp(arm
-  "/home/johnnyname/arm_ws/src/arm/msg/angles.msg"
+  "/home/johnnyname/repos/robohand/src/arm/msg/angles.msg"
   "${MSG_I_FLAGS}"
   ""
-  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/arm
-)
-_generate_msg_cpp(arm
-  "/home/johnnyname/arm_ws/src/arm/msg/detector.msg"
-  "${MSG_I_FLAGS}"
-  "/home/johnnyname/arm_ws/src/arm/msg/coord.msg"
-  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/arm
-)
-_generate_msg_cpp(arm
-  "/home/johnnyname/arm_ws/src/arm/msg/converter.msg"
-  "${MSG_I_FLAGS}"
-  "/home/johnnyname/arm_ws/src/arm/msg/coord.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/arm
 )
 
@@ -82,13 +82,13 @@ add_custom_target(arm_generate_messages_cpp
 add_dependencies(arm_generate_messages arm_generate_messages_cpp)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/johnnyname/arm_ws/src/arm/msg/coord.msg" NAME_WE)
+get_filename_component(_filename "/home/johnnyname/repos/robohand/src/arm/msg/detector.msg" NAME_WE)
 add_dependencies(arm_generate_messages_cpp _arm_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/johnnyname/arm_ws/src/arm/msg/detector.msg" NAME_WE)
+get_filename_component(_filename "/home/johnnyname/repos/robohand/src/arm/msg/converter.msg" NAME_WE)
 add_dependencies(arm_generate_messages_cpp _arm_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/johnnyname/arm_ws/src/arm/msg/angles.msg" NAME_WE)
+get_filename_component(_filename "/home/johnnyname/repos/robohand/src/arm/msg/coord.msg" NAME_WE)
 add_dependencies(arm_generate_messages_cpp _arm_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/johnnyname/arm_ws/src/arm/msg/converter.msg" NAME_WE)
+get_filename_component(_filename "/home/johnnyname/repos/robohand/src/arm/msg/angles.msg" NAME_WE)
 add_dependencies(arm_generate_messages_cpp _arm_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -101,27 +101,27 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS arm_generate_messages_cpp)
 ### Section generating for lang: geneus
 ### Generating Messages
 _generate_msg_eus(arm
-  "/home/johnnyname/arm_ws/src/arm/msg/coord.msg"
+  "/home/johnnyname/repos/robohand/src/arm/msg/detector.msg"
+  "${MSG_I_FLAGS}"
+  "/home/johnnyname/repos/robohand/src/arm/msg/coord.msg"
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/arm
+)
+_generate_msg_eus(arm
+  "/home/johnnyname/repos/robohand/src/arm/msg/converter.msg"
+  "${MSG_I_FLAGS}"
+  "/home/johnnyname/repos/robohand/src/arm/msg/coord.msg"
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/arm
+)
+_generate_msg_eus(arm
+  "/home/johnnyname/repos/robohand/src/arm/msg/coord.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/arm
 )
 _generate_msg_eus(arm
-  "/home/johnnyname/arm_ws/src/arm/msg/angles.msg"
+  "/home/johnnyname/repos/robohand/src/arm/msg/angles.msg"
   "${MSG_I_FLAGS}"
   ""
-  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/arm
-)
-_generate_msg_eus(arm
-  "/home/johnnyname/arm_ws/src/arm/msg/detector.msg"
-  "${MSG_I_FLAGS}"
-  "/home/johnnyname/arm_ws/src/arm/msg/coord.msg"
-  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/arm
-)
-_generate_msg_eus(arm
-  "/home/johnnyname/arm_ws/src/arm/msg/converter.msg"
-  "${MSG_I_FLAGS}"
-  "/home/johnnyname/arm_ws/src/arm/msg/coord.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/arm
 )
 
@@ -139,13 +139,13 @@ add_custom_target(arm_generate_messages_eus
 add_dependencies(arm_generate_messages arm_generate_messages_eus)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/johnnyname/arm_ws/src/arm/msg/coord.msg" NAME_WE)
+get_filename_component(_filename "/home/johnnyname/repos/robohand/src/arm/msg/detector.msg" NAME_WE)
 add_dependencies(arm_generate_messages_eus _arm_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/johnnyname/arm_ws/src/arm/msg/detector.msg" NAME_WE)
+get_filename_component(_filename "/home/johnnyname/repos/robohand/src/arm/msg/converter.msg" NAME_WE)
 add_dependencies(arm_generate_messages_eus _arm_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/johnnyname/arm_ws/src/arm/msg/angles.msg" NAME_WE)
+get_filename_component(_filename "/home/johnnyname/repos/robohand/src/arm/msg/coord.msg" NAME_WE)
 add_dependencies(arm_generate_messages_eus _arm_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/johnnyname/arm_ws/src/arm/msg/converter.msg" NAME_WE)
+get_filename_component(_filename "/home/johnnyname/repos/robohand/src/arm/msg/angles.msg" NAME_WE)
 add_dependencies(arm_generate_messages_eus _arm_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -158,27 +158,27 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS arm_generate_messages_eus)
 ### Section generating for lang: genlisp
 ### Generating Messages
 _generate_msg_lisp(arm
-  "/home/johnnyname/arm_ws/src/arm/msg/coord.msg"
+  "/home/johnnyname/repos/robohand/src/arm/msg/detector.msg"
+  "${MSG_I_FLAGS}"
+  "/home/johnnyname/repos/robohand/src/arm/msg/coord.msg"
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/arm
+)
+_generate_msg_lisp(arm
+  "/home/johnnyname/repos/robohand/src/arm/msg/converter.msg"
+  "${MSG_I_FLAGS}"
+  "/home/johnnyname/repos/robohand/src/arm/msg/coord.msg"
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/arm
+)
+_generate_msg_lisp(arm
+  "/home/johnnyname/repos/robohand/src/arm/msg/coord.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/arm
 )
 _generate_msg_lisp(arm
-  "/home/johnnyname/arm_ws/src/arm/msg/angles.msg"
+  "/home/johnnyname/repos/robohand/src/arm/msg/angles.msg"
   "${MSG_I_FLAGS}"
   ""
-  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/arm
-)
-_generate_msg_lisp(arm
-  "/home/johnnyname/arm_ws/src/arm/msg/detector.msg"
-  "${MSG_I_FLAGS}"
-  "/home/johnnyname/arm_ws/src/arm/msg/coord.msg"
-  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/arm
-)
-_generate_msg_lisp(arm
-  "/home/johnnyname/arm_ws/src/arm/msg/converter.msg"
-  "${MSG_I_FLAGS}"
-  "/home/johnnyname/arm_ws/src/arm/msg/coord.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/arm
 )
 
@@ -196,13 +196,13 @@ add_custom_target(arm_generate_messages_lisp
 add_dependencies(arm_generate_messages arm_generate_messages_lisp)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/johnnyname/arm_ws/src/arm/msg/coord.msg" NAME_WE)
+get_filename_component(_filename "/home/johnnyname/repos/robohand/src/arm/msg/detector.msg" NAME_WE)
 add_dependencies(arm_generate_messages_lisp _arm_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/johnnyname/arm_ws/src/arm/msg/detector.msg" NAME_WE)
+get_filename_component(_filename "/home/johnnyname/repos/robohand/src/arm/msg/converter.msg" NAME_WE)
 add_dependencies(arm_generate_messages_lisp _arm_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/johnnyname/arm_ws/src/arm/msg/angles.msg" NAME_WE)
+get_filename_component(_filename "/home/johnnyname/repos/robohand/src/arm/msg/coord.msg" NAME_WE)
 add_dependencies(arm_generate_messages_lisp _arm_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/johnnyname/arm_ws/src/arm/msg/converter.msg" NAME_WE)
+get_filename_component(_filename "/home/johnnyname/repos/robohand/src/arm/msg/angles.msg" NAME_WE)
 add_dependencies(arm_generate_messages_lisp _arm_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -215,27 +215,27 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS arm_generate_messages_lisp)
 ### Section generating for lang: gennodejs
 ### Generating Messages
 _generate_msg_nodejs(arm
-  "/home/johnnyname/arm_ws/src/arm/msg/coord.msg"
+  "/home/johnnyname/repos/robohand/src/arm/msg/detector.msg"
+  "${MSG_I_FLAGS}"
+  "/home/johnnyname/repos/robohand/src/arm/msg/coord.msg"
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/arm
+)
+_generate_msg_nodejs(arm
+  "/home/johnnyname/repos/robohand/src/arm/msg/converter.msg"
+  "${MSG_I_FLAGS}"
+  "/home/johnnyname/repos/robohand/src/arm/msg/coord.msg"
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/arm
+)
+_generate_msg_nodejs(arm
+  "/home/johnnyname/repos/robohand/src/arm/msg/coord.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/arm
 )
 _generate_msg_nodejs(arm
-  "/home/johnnyname/arm_ws/src/arm/msg/angles.msg"
+  "/home/johnnyname/repos/robohand/src/arm/msg/angles.msg"
   "${MSG_I_FLAGS}"
   ""
-  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/arm
-)
-_generate_msg_nodejs(arm
-  "/home/johnnyname/arm_ws/src/arm/msg/detector.msg"
-  "${MSG_I_FLAGS}"
-  "/home/johnnyname/arm_ws/src/arm/msg/coord.msg"
-  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/arm
-)
-_generate_msg_nodejs(arm
-  "/home/johnnyname/arm_ws/src/arm/msg/converter.msg"
-  "${MSG_I_FLAGS}"
-  "/home/johnnyname/arm_ws/src/arm/msg/coord.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/arm
 )
 
@@ -253,13 +253,13 @@ add_custom_target(arm_generate_messages_nodejs
 add_dependencies(arm_generate_messages arm_generate_messages_nodejs)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/johnnyname/arm_ws/src/arm/msg/coord.msg" NAME_WE)
+get_filename_component(_filename "/home/johnnyname/repos/robohand/src/arm/msg/detector.msg" NAME_WE)
 add_dependencies(arm_generate_messages_nodejs _arm_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/johnnyname/arm_ws/src/arm/msg/detector.msg" NAME_WE)
+get_filename_component(_filename "/home/johnnyname/repos/robohand/src/arm/msg/converter.msg" NAME_WE)
 add_dependencies(arm_generate_messages_nodejs _arm_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/johnnyname/arm_ws/src/arm/msg/angles.msg" NAME_WE)
+get_filename_component(_filename "/home/johnnyname/repos/robohand/src/arm/msg/coord.msg" NAME_WE)
 add_dependencies(arm_generate_messages_nodejs _arm_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/johnnyname/arm_ws/src/arm/msg/converter.msg" NAME_WE)
+get_filename_component(_filename "/home/johnnyname/repos/robohand/src/arm/msg/angles.msg" NAME_WE)
 add_dependencies(arm_generate_messages_nodejs _arm_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -272,27 +272,27 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS arm_generate_messages_nodejs)
 ### Section generating for lang: genpy
 ### Generating Messages
 _generate_msg_py(arm
-  "/home/johnnyname/arm_ws/src/arm/msg/coord.msg"
+  "/home/johnnyname/repos/robohand/src/arm/msg/detector.msg"
+  "${MSG_I_FLAGS}"
+  "/home/johnnyname/repos/robohand/src/arm/msg/coord.msg"
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/arm
+)
+_generate_msg_py(arm
+  "/home/johnnyname/repos/robohand/src/arm/msg/converter.msg"
+  "${MSG_I_FLAGS}"
+  "/home/johnnyname/repos/robohand/src/arm/msg/coord.msg"
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/arm
+)
+_generate_msg_py(arm
+  "/home/johnnyname/repos/robohand/src/arm/msg/coord.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/arm
 )
 _generate_msg_py(arm
-  "/home/johnnyname/arm_ws/src/arm/msg/angles.msg"
+  "/home/johnnyname/repos/robohand/src/arm/msg/angles.msg"
   "${MSG_I_FLAGS}"
   ""
-  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/arm
-)
-_generate_msg_py(arm
-  "/home/johnnyname/arm_ws/src/arm/msg/detector.msg"
-  "${MSG_I_FLAGS}"
-  "/home/johnnyname/arm_ws/src/arm/msg/coord.msg"
-  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/arm
-)
-_generate_msg_py(arm
-  "/home/johnnyname/arm_ws/src/arm/msg/converter.msg"
-  "${MSG_I_FLAGS}"
-  "/home/johnnyname/arm_ws/src/arm/msg/coord.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/arm
 )
 
@@ -310,13 +310,13 @@ add_custom_target(arm_generate_messages_py
 add_dependencies(arm_generate_messages arm_generate_messages_py)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/johnnyname/arm_ws/src/arm/msg/coord.msg" NAME_WE)
+get_filename_component(_filename "/home/johnnyname/repos/robohand/src/arm/msg/detector.msg" NAME_WE)
 add_dependencies(arm_generate_messages_py _arm_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/johnnyname/arm_ws/src/arm/msg/detector.msg" NAME_WE)
+get_filename_component(_filename "/home/johnnyname/repos/robohand/src/arm/msg/converter.msg" NAME_WE)
 add_dependencies(arm_generate_messages_py _arm_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/johnnyname/arm_ws/src/arm/msg/angles.msg" NAME_WE)
+get_filename_component(_filename "/home/johnnyname/repos/robohand/src/arm/msg/coord.msg" NAME_WE)
 add_dependencies(arm_generate_messages_py _arm_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/johnnyname/arm_ws/src/arm/msg/converter.msg" NAME_WE)
+get_filename_component(_filename "/home/johnnyname/repos/robohand/src/arm/msg/angles.msg" NAME_WE)
 add_dependencies(arm_generate_messages_py _arm_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility

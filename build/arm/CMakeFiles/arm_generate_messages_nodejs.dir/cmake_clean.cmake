@@ -1,9 +1,9 @@
 file(REMOVE_RECURSE
   "CMakeFiles/arm_generate_messages_nodejs"
-  "/home/johnnyname/arm_ws/devel/share/gennodejs/ros/arm/msg/coord.js"
-  "/home/johnnyname/arm_ws/devel/share/gennodejs/ros/arm/msg/angles.js"
-  "/home/johnnyname/arm_ws/devel/share/gennodejs/ros/arm/msg/detector.js"
-  "/home/johnnyname/arm_ws/devel/share/gennodejs/ros/arm/msg/converter.js"
+  "/home/johnnyname/repos/robohand/devel/share/gennodejs/ros/arm/msg/detector.js"
+  "/home/johnnyname/repos/robohand/devel/share/gennodejs/ros/arm/msg/converter.js"
+  "/home/johnnyname/repos/robohand/devel/share/gennodejs/ros/arm/msg/coord.js"
+  "/home/johnnyname/repos/robohand/devel/share/gennodejs/ros/arm/msg/angles.js"
 )
 
 # Per-language clean rules from dependency scanning.

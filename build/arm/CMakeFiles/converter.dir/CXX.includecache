@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/johnnyname/arm_ws/devel/include/arm/converter.h
+/home/johnnyname/repos/robohand/devel/include/arm/converter.h
 string
 -
 vector
@@ -24,7 +24,7 @@ ros/message_operations.h
 arm/coord.h
 -
 
-/home/johnnyname/arm_ws/devel/include/arm/coord.h
+/home/johnnyname/repos/robohand/devel/include/arm/coord.h
 string
 -
 vector
@@ -40,7 +40,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/johnnyname/arm_ws/devel/include/arm/detector.h
+/home/johnnyname/repos/robohand/devel/include/arm/detector.h
 string
 -
 vector
@@ -66,13 +66,13 @@ arm/coord.h
 arm/coord.h
 -
 
-/home/johnnyname/arm_ws/src/arm/src/converter.cpp
+/home/johnnyname/repos/robohand/src/arm/src/converter.cpp
 ros/ros.h
-/home/johnnyname/arm_ws/src/arm/src/ros/ros.h
+/home/johnnyname/repos/robohand/src/arm/src/ros/ros.h
 arm/detector.h
-/home/johnnyname/arm_ws/src/arm/src/arm/detector.h
+/home/johnnyname/repos/robohand/src/arm/src/arm/detector.h
 arm/converter.h
-/home/johnnyname/arm_ws/src/arm/src/arm/converter.h
+/home/johnnyname/repos/robohand/src/arm/src/arm/converter.h
 
 /opt/ros/melodic/include/ros/advertise_options.h
 ros/forwards.h

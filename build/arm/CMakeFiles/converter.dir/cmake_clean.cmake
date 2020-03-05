@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/converter.dir/src/converter.cpp.o"
-  "/home/johnnyname/arm_ws/devel/lib/arm/converter.pdb"
-  "/home/johnnyname/arm_ws/devel/lib/arm/converter"
+  "/home/johnnyname/repos/robohand/devel/lib/arm/converter.pdb"
+  "/home/johnnyname/repos/robohand/devel/lib/arm/converter"
 )
 
 # Per-language clean rules from dependency scanning.

@@ -1,8 +1,8 @@
-# Install script for directory: /home/johnnyname/arm_ws/src/arm
+# Install script for directory: /home/johnnyname/repos/robohand/src/arm
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/johnnyname/arm_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/johnnyname/repos/robohand/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -39,57 +39,57 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/arm/msg" TYPE FILE FILES
-    "/home/johnnyname/arm_ws/src/arm/msg/coord.msg"
-    "/home/johnnyname/arm_ws/src/arm/msg/detector.msg"
-    "/home/johnnyname/arm_ws/src/arm/msg/angles.msg"
-    "/home/johnnyname/arm_ws/src/arm/msg/converter.msg"
+    "/home/johnnyname/repos/robohand/src/arm/msg/coord.msg"
+    "/home/johnnyname/repos/robohand/src/arm/msg/detector.msg"
+    "/home/johnnyname/repos/robohand/src/arm/msg/angles.msg"
+    "/home/johnnyname/repos/robohand/src/arm/msg/converter.msg"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/arm/cmake" TYPE FILE FILES "/home/johnnyname/arm_ws/build/arm/catkin_generated/installspace/arm-msg-paths.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/arm/cmake" TYPE FILE FILES "/home/johnnyname/repos/robohand/build/arm/catkin_generated/installspace/arm-msg-paths.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/johnnyname/arm_ws/devel/include/arm")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/johnnyname/repos/robohand/devel/include/arm")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/johnnyname/arm_ws/devel/share/roseus/ros/arm")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/johnnyname/repos/robohand/devel/share/roseus/ros/arm")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/johnnyname/arm_ws/devel/share/common-lisp/ros/arm")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/johnnyname/repos/robohand/devel/share/common-lisp/ros/arm")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/home/johnnyname/arm_ws/devel/share/gennodejs/ros/arm")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/home/johnnyname/repos/robohand/devel/share/gennodejs/ros/arm")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  execute_process(COMMAND "/usr/bin/python2" -m compileall "/home/johnnyname/arm_ws/devel/lib/python2.7/dist-packages/arm")
+  execute_process(COMMAND "/usr/bin/python2" -m compileall "/home/johnnyname/repos/robohand/devel/lib/python2.7/dist-packages/arm")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python2.7/dist-packages" TYPE DIRECTORY FILES "/home/johnnyname/arm_ws/devel/lib/python2.7/dist-packages/arm")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python2.7/dist-packages" TYPE DIRECTORY FILES "/home/johnnyname/repos/robohand/devel/lib/python2.7/dist-packages/arm")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/johnnyname/arm_ws/build/arm/catkin_generated/installspace/arm.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/johnnyname/repos/robohand/build/arm/catkin_generated/installspace/arm.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/arm/cmake" TYPE FILE FILES "/home/johnnyname/arm_ws/build/arm/catkin_generated/installspace/arm-msg-extras.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/arm/cmake" TYPE FILE FILES "/home/johnnyname/repos/robohand/build/arm/catkin_generated/installspace/arm-msg-extras.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/arm/cmake" TYPE FILE FILES
-    "/home/johnnyname/arm_ws/build/arm/catkin_generated/installspace/armConfig.cmake"
-    "/home/johnnyname/arm_ws/build/arm/catkin_generated/installspace/armConfig-version.cmake"
+    "/home/johnnyname/repos/robohand/build/arm/catkin_generated/installspace/armConfig.cmake"
+    "/home/johnnyname/repos/robohand/build/arm/catkin_generated/installspace/armConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/arm" TYPE FILE FILES "/home/johnnyname/arm_ws/src/arm/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/arm" TYPE FILE FILES "/home/johnnyname/repos/robohand/src/arm/package.xml")
 endif()
 

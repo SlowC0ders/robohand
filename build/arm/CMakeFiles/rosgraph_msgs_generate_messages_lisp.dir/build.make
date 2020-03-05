@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/johnnyname/arm_ws/src
+CMAKE_SOURCE_DIR = /home/johnnyname/repos/robohand/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/johnnyname/arm_ws/build
+CMAKE_BINARY_DIR = /home/johnnyname/repos/robohand/build
 
 # Utility rule file for rosgraph_msgs_generate_messages_lisp.
 
@@ -63,10 +63,10 @@ arm/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build: rosgraph_msgs_gen
 .PHONY : arm/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
 
 arm/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean:
-	cd /home/johnnyname/arm_ws/build/arm && $(CMAKE_COMMAND) -P CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/cmake_clean.cmake
+	cd /home/johnnyname/repos/robohand/build/arm && $(CMAKE_COMMAND) -P CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/cmake_clean.cmake
 .PHONY : arm/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean
 
 arm/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/depend:
-	cd /home/johnnyname/arm_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/johnnyname/arm_ws/src /home/johnnyname/arm_ws/src/arm /home/johnnyname/arm_ws/build /home/johnnyname/arm_ws/build/arm /home/johnnyname/arm_ws/build/arm/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/johnnyname/repos/robohand/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/johnnyname/repos/robohand/src /home/johnnyname/repos/robohand/src/arm /home/johnnyname/repos/robohand/build /home/johnnyname/repos/robohand/build/arm /home/johnnyname/repos/robohand/build/arm/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : arm/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/depend
 

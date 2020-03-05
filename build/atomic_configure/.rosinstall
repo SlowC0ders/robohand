@@ -1,2 +1,2 @@
 - setup-file:
-    local-name: /home/johnnyname/arm_ws/devel/setup.sh
+    local-name: /home/johnnyname/repos/robohand/devel/setup.sh
