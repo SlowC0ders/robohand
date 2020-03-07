@@ -38,11 +38,29 @@ Here you can see tiny instruction how to install ROS enviroment:
 ```
 For more information go there: [ROS instalation](http://wiki.ros.org/melodic/Installation/Ubuntu)
 
-### Working with ROS:
-In order to work with ROS you must:
-1. Go to the project folder
+### Creating a workspace and our project
+Create workspace by command (you can imagine other title of directory "arm_ws isn't necessary"):
 ```
-    cd robohand
+mkdir arm_ws/src
+```
+Then you must go to the our workspace:
+```
+cd arm_ws
+```
+Here write that [command](https://wiki.ros.org/catkin/commands/catkin_make): 
+```
+catkin_make
+```
+Next, run setup.bash script in order to establish system's global variables for working with our workspace
+```
+source devel/setup.bash 
+```
+
+### Working with ROS:
+In order to work with ROS you must do only 3 steps:
+1. Go to the project folder. Example:
+```
+    cd arm_ws
 ```
 2. Here you must enter in the "devel"
 ```
@@ -59,6 +77,14 @@ Every changes in the project are assembeled by "catkin_make" command:
     catkin_make
 ```
 For more information go there: [catkin_make command](http://wiki.ros.org/ROS/Tutorials/BuildingPackages)
+
+### How use our project
+Create project by command:
+```
+catkin_create_pkg arm std_msgs rospy roscpp
+```
+Then instal "arm" folder and replace with your folder. Path example: "your_project_name/src/arm"
+
 
 ### How run system
 If you have made all mentioned above (espetialy run setup.bash), then you can run system (now we can make run it only by hands :[ ).
