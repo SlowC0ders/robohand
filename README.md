@@ -79,7 +79,7 @@ Every changes in the project are assembeled by "catkin_make" command:
 For more information go there: [catkin_make command](http://wiki.ros.org/ROS/Tutorials/BuildingPackages)
 
 ### How use our project
-Create project by command:
+If you are in you worlspace create project by command:
 ```
 catkin_create_pkg arm std_msgs rospy roscpp
 ```
