@@ -104,3 +104,4 @@ If you have made all mentioned above (espetialy run setup.bash), then you can ru
 ```
     rosrun arm converter
 ```
+Other nodes are started likewise
