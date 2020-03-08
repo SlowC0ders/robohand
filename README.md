@@ -87,7 +87,7 @@ Then instal "arm" folder and replace with your folder. Path example: "your_proje
 
 
 ### How run system
-If you have made all mentioned above (espetialy run setup.bash), then you can run system (now we can make run it only by hands :[ ).
+If you have made all mentioned above (especially run setup.bash), then you can run system (now we can make run it only by hands :[ ).
 1. Run the system core with command:
 ```
     roscore
