@@ -3,9 +3,9 @@
 #include "arm/converter.h" // output message
 #include "wintospace.h"
 
-globConv inputData;
+arm::detector inputData;
 
-arm::converter *read(globConv *in) {
+arm::converter read(arm::detector *in) {
 
 	float Ax1, Ay1, Bx1, By1, Cx1, Cy1, Dx1, Dy1, objwinX, objwinY, Ax2, Ay2, Bx2, By2, Cx2, Cy2, Dx2, Dy2, objsX, objsY, x0, Yw0, Xw0; /*in-out, objs = nedeed space crd */
 	float y0, x1, y1, Xw, Yw, Ys, Xs, p, q, p1, q1; /*helpful */
@@ -50,10 +50,10 @@ n:		 if (Xw == objwinX) {
 			if (Yw == objwinY) {  /*gave Xs, Ys for object*/
 				objsX = Xs;
 				objsY = Ys;
-        arm::converter tmp;
-        tmp.object.x = objsX;
-        tmp.object.y = objsY;
-				return &tmp;
+        		arm::converter tmp;
+        		tmp.object.x = objsX;
+        		tmp.object.y = objsY;
+				return tmp;
 			}
 			else {
 			if (Yw0==0){
@@ -209,7 +209,9 @@ n:		 if (Xw == objwinX) {
 		 }/*new coords for iteration*/
 
 		}while (objsY != Ys && objsX != Xs);
-		return NULL;
+		arm::converter tmp;
+        tmp.object.x = 0;
+		return tmp;
 }
 
 int AreSame(float a, float b)
@@ -238,11 +240,11 @@ int main(int argc, char **argv)
 
   while (ros::ok()) // cycle for sending messages
   {
-    arm::converter *tmp = NULL;
-    if (NULL != (arm::converter *tmp = read(&inputData))) {
-      arm::converter msg = *tmp; // create message
+    arm::converter tmp;
+    if (0 != (tmp = read(&inputData)).object.x) {
+      arm::converter msg = tmp; // create message
+	  chatter_pub.publish(msg); // send message
     }
-    chatter_pub.publish(msg); // send message
 
     ros::spinOnce();
 

@@ -1,5 +1,5 @@
-#include <stdio.h>
-#include < math.h > 
+#include <stdio.h> 
+#include <math.h> 
 #include <stdlib.h>
 #define EPSILON 10;
 #include <string.h>
@@ -11,18 +11,6 @@
 #ifndef START
 
 #define START
-typedef struct crd {
-    int x;
-    int y;
-};
-typedef struct globConv {
-    crd one;
-    crd two;
-    crd three;
-    crd four;
-    crd object;
-    int radius;
-};
 int read (char* in, char* out);
 int AreSame(float a, float b);
 #endif
