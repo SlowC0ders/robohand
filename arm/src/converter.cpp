@@ -228,7 +228,7 @@ void chatterCallback(const arm::detector::ConstPtr& msg)
 
 int main(int argc, char **argv)
 {
-
+  printf("hello");
   ros::init(argc, argv, "converter"); // initialise node
 
   ros::NodeHandle n;
