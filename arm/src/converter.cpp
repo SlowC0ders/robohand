@@ -5,19 +5,30 @@
 
 arm::detector inputData;
 
-arm::converter read(arm::detector *in) {
+arm::converter read() {
 
 	float Ax1, Ay1, Bx1, By1, Cx1, Cy1, Dx1, Dy1, objwinX, objwinY, Ax2, Ay2, Bx2, By2, Cx2, Cy2, Dx2, Dy2, objsX, objsY, x0, Yw0, Xw0; /*in-out, objs = nedeed space crd */
 	float y0, x1, y1, Xw, Yw, Ys, Xs, p, q, p1, q1; /*helpful */
-  
-  Ax1 = in->one.x;
-  Ay1 = in->one.y;
-  Bx1 = in->two.x;
-  By1 = in->two.y;
-  Cx1 = in->three.x;
-  Cy1 = in->three.y;
-  Dx1 = in->four.x;
-  Dy1 = in->four.y;
+	
+
+    Ax1 = inputData.four.y;
+    Ay1 = inputData.four.x;
+    Bx1 = inputData.one.y;
+    By1 = inputData.one.x;
+    Cx1 = inputData.two.y;
+    Cy1 = inputData.two.x;
+    Dx1 = inputData.three.y;
+    Dy1 = inputData.three.x;
+	objwinX = inputData.object.y;
+	objwinY = inputData.object.x;
+	Ax2 = 0;   // верхний левый
+	Ay2 = 297;
+	Bx2 = 210; // верхний правый
+	By2 = 297;
+	Cx2 = 210; // внизу справа
+	Cy2 = 0;
+	Dx2 = 0;   // нижний левый
+	Dy2 = 0;
 
 	//if (objsX == objwinX || objsY == objwinY) {
 		objsX = objsY = -1;
@@ -53,6 +64,7 @@ n:		 if (Xw == objwinX) {
         		arm::converter tmp;
         		tmp.object.x = objsX;
         		tmp.object.y = objsY;
+				ROS_INFO("Finish %d", tmp.object.x);
 				return tmp;
 			}
 			else {
@@ -79,7 +91,6 @@ n:		 if (Xw == objwinX) {
 	 			}
 	 	Xw = Xw0 - allowerr; /*not found*/
 		}
-
 
 		 int n = 0, tmp, t2; float EF, mass[8]; // counter+helpful val;
 		 do {
@@ -223,31 +234,30 @@ int AreSame(float a, float b)
 
 void chatterCallback(const arm::detector::ConstPtr& msg)
 {
-  inputData = *msg;
+  ROS_INFO("I heard: [%d]", msg->object.x);
 }
 
 int main(int argc, char **argv)
 {
-  printf("hello");
+  ROS_INFO("Converter started");
+
   ros::init(argc, argv, "converter"); // initialise node
 
   ros::NodeHandle n;
 
   ros::Publisher chatter_pub = n.advertise<arm::converter>("conv_chatter", 1000); // initialise topic for third step programm (angles_converter.cpp)
-  ros::Subscriber sub = n.subscribe("det_chatter", 1000, chatterCallback); // subscribe on detector chatter
+  ros::Subscriber sub = n.subscribe("det_chatter", 10, chatterCallback); // subscribe on detector chatter
 
   ros::Rate loop_rate(10); // establish 10hz loop rate
 
   while (ros::ok()) // cycle for sending messages
   {
     arm::converter tmp;
-    if (0 != (tmp = read(&inputData)).object.x) {
+    if ((tmp = read()).object.x) {
       arm::converter msg = tmp; // create message
 	  chatter_pub.publish(msg); // send message
     }
-
     ros::spinOnce();
-
     loop_rate.sleep(); // time balancer
   }
 
