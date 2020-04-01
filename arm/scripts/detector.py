@@ -65,19 +65,23 @@ def talker():
         center = figure_center_search(img, img_info[ 0 ], img_info[ 1 ])
         if center is None:
             print ("The figure is missing")
+            continue
         elif A is None:
             print ("The A point is missing")
+            continue
         elif B is None:
             print ("The B point is missing")
+            continue
         elif C is None:
             print ("The C point is missing")
+            continue
         elif D is None:
             print ("The D point is missing")
+            continue
         else:
             radius = figure_radius_search(img, img_info[ 0 ], img_info[ 1 ], center[ 0 ], center[ 1 ])
-            print ("Center of figure:" + str(center))
-            # print ("Radius of figure:" + str(radius))
-            message.object = center
+            message.object.x = center[1]
+            message.object.y = center[0]
             message.radius = radius 
             cv2.circle(img, (A[ 1 ], A[ 0 ]), 4, (0, 0, 255), -1)
             cv2.circle(img, (B[ 1 ], B[ 0 ]), 4, (0, 0, 255), -1)
@@ -85,18 +89,19 @@ def talker():
             cv2.circle(img, (D[ 1 ], D[ 0 ]), 4, (0, 0, 255), -1)
             cv2.circle(img, (center[ 1 ], center[ 0 ]), 4, (0, 0, 255), -1)
             cv2.line(img, (center[ 1 ], center[ 0 ]), (center[ 1 ] + radius, center[ 0 ]), (0, 0, 255), 1)
-        print ("First reference point:" + str(A)) 
-        print ("Second reference point:" + str(B))
-        print ("Third reference point:" + str(C))
-        print ("Fourth reference point:" + str(D))
-        message.one = A
-        message.two = B
-        message.three = C
-        message.four = D
+        message.one.x = A[1]
+        message.one.y = A[0]
+        message.two.x = B[1]
+        message.two.y = B[0]
+        message.three.x = C[1]
+        message.three.y = C[0]
+        message.four.x = D[1]
+        message.four.y = D[0]
         ch = cv2.waitKey(5)
         if ch == 27:
             break
         pub.publish(message) # send to converter
+        print(str(message))
         rate.sleep() # time balancer
 
 if __name__ == '__main__':

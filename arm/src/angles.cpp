@@ -31,9 +31,7 @@ int main(int argc, char **argv)
         double a, b, c, fi;
     };
     struct hand { //параметры манипулятора
-        double height, l1, l2, l3, quality = 1,
-            bMin = -60, bMax = 60,
-            cMin = -70, cMax = 70;
+        double height, l1, l2, l3, quality = 1;
     };
     struct limbs { 
         vector vec;
@@ -42,13 +40,7 @@ int main(int argc, char **argv)
     };
 
     limbs limb1;
-    limb1.ArgMax = 90;
-    limb1.ArgMin = -90;
-
     limbs limb3;
-    limb3.ArgMax = 180;
-    limb3.ArgMin = 0;
-  
     limbs limb2;
     angs angs;
 
@@ -66,9 +58,8 @@ int main(int argc, char **argv)
   //===========================================================================================================
     length = sqrt(pow(obj.object.x, 2) + pow(obj.object.y, 2)); //расстояние от манипулятора до объекта
 
-    bool y = false;
-    for (int i = limb1.ArgMin; i < limb1.ArgMax; i++) { 
-        for (int j = limb3.ArgMin; j < limb3.ArgMax; j++) {
+    for (int i = 0; i < 90; i++) { 
+        for (int j = 0; j < 180; j++) {
 
             limb1.x = (cos(i * PI / 180) * hand.l1);
             limb1.y = (sin(i * PI / 180) * hand.l1 + hand.height);
@@ -90,22 +81,13 @@ int main(int argc, char **argv)
                 limb3.vec.len = sqrt(pow(limb3.vec.x, 2) + pow(limb3.vec.y, 2));
 
                 angs.a = i;
-
-                angs.b = acos((limb1.vec.x * limb2.vec.x + limb1.vec.y * limb2.vec.y) / (limb1.vec.len * limb2.vec.len));
-                angs.c = acos((limb2.vec.x * limb3.vec.x + limb2.vec.y * limb3.vec.y) / (limb2.vec.len * limb3.vec.len));
-
-                //здесь должна быть проверка допустимости подобранных углов
-                /*if (angs.b > hand) {
-                    y = true;
-                    break;
-                }*/
+                angs.b = acos((limb1.vec.x * limb2.vec.x + limb1.vec.y * limb2.vec.y) / limb1.vec.len * limb2.vec.len);
+                angs.c = acos((limb2.vec.x * limb3.vec.x + limb2.vec.y * limb3.vec.y) / limb2.vec.len * limb3.vec.len);
             }
-            
         }
-        if (y == true) { break; }
     }
-
-    angs.fi = atan(obj.object.y / obj.object.x);
+    if (obj.object.x)
+      angs.fi = atan(obj.object.y / obj.object.x);
 
     msg.shoulder = angs.a;
     msg.elbow = angs.b;
